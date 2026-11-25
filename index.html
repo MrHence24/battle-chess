@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10131a" />
+    <meta name="description" content="Battle Chess — a cinematic 3D chess prototype." />
+    <title>Battle Chess — Prototype</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div><p class="eyebrow">PROJECT PROTOTYPE · 0.1.0</p><h1>Battle Chess</h1></div>
+        <div class="top-actions"><span id="status" class="status">White to move</span><button id="restart" class="quiet-button">Restart</button></div>
+      </header>
+      <main class="layout">
+        <section class="board-panel" aria-label="3D chessboard">
+          <div id="scene" class="scene"></div>
+          <div class="board-caption"><span>WHITE</span><span>CLASSIC RULES · 3D PRESENTATION</span><span>BLACK</span></div>
+        </section>
+        <aside class="side-panel">
+          <section class="panel-block">
+            <p class="eyebrow">CURRENT POSITION</p>
+            <h2 id="turn-title">White to move</h2>
+            <p id="instruction" class="muted">Select one of your pieces, then select a highlighted square.</p>
+          </section>
+          <section class="panel-block">
+            <div class="section-heading"><h3>Move history</h3><button id="undo" class="text-button" disabled>Undo</button></div>
+            <ol id="history" class="history"><li class="muted">No moves yet</li></ol>
+          </section>
+          <section class="panel-block prototype-note">
+            <p class="eyebrow">PROTOTYPE SCOPE</p>
+            <p>Legal chess movement, 3D board, and placeholder pieces. Character combat and the Windows desktop wrapper are later milestones.</p>
+          </section>
+        </aside>
+      </main>
+      <div id="promotion" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="promotion-title">
+        <div class="modal-card"><p class="eyebrow">PAWN PROMOTION</p><h2 id="promotion-title">Choose a piece</h2><div class="promotion-options"><button data-piece="q">Queen</button><button data-piece="r">Rook</button><button data-piece="b">Bishop</button><button data-piece="n">Knight</button></div></div>
+      </div>
+      <footer>Windows-first desktop target · Browser-first development · Original assets only</footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
